@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 	  <h4>Hello 123  321 Mark!</h4>
+	  <a>git.exe push -v --progress "SuperMall" main:main</a>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
