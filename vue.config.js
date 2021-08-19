@@ -1,0 +1,19 @@
+module.exports = {
+	configureWebpack:{
+		resolve:{
+			alias:{
+				//由于默认@已经配置为src路径所以不用在进行二次配置
+				//1.配置资源路径assets
+				'assets':'@/assets',
+				//2.配置公共路径common
+				'common':'@/common',
+				//3.配置组件路径components
+				'components':'@/components',
+				//4.配置网络路径network
+				'network':'@/network',
+				//5.配置大型视图路径views
+				'views':'@/views',
+			}
+		}
+	}
+};
