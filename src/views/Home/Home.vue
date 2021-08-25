@@ -5,8 +5,10 @@
 		</NavBar>
 		<!-- 轮播图 -->
 		<HomeSwiper :banners="banner"></HomeSwiper>
-		<!-- 内容圆形图显示 -->
+		<!-- 推荐内容圆形图显示 -->
 		<MarkCircularText :recommends="recommend"></MarkCircularText>
+		<!-- 本周流行 -->
+		<FeatureView :Features="Features"></FeatureView>
 		<a>首页界面</a>
 	</div>
 </template>
@@ -16,18 +18,21 @@
 	import {GetHomeMultidata} from 'network/HomeWork.js';
 	import HomeSwiper from './childcops/HomeSwiper.vue';
 	import MarkCircularText from './childcops/MarkCircularText.vue';
+	import FeatureView from './childcops/FeatureView.vue';
 	export default {
 		name:"home",
 		components:{
 			NavBar,
 			HomeSwiper,
-			MarkCircularText
+			MarkCircularText,
+			FeatureView
 		},
 		data(){
 			return {
 				result:null,
 				banner:[],
-				recommend:[]
+				recommend:[],
+				Features:[]
 			}
 		},
 		created(){
@@ -40,15 +45,36 @@
 			//保存对象中子项，这里取banner下list
 			this.banner =o.data.banner.list;
 			this.recommend =o.data.recommend.list;
+			//this.Features = this.recommend;
+			this.recommend.forEach(o=>{
+				this.Features.push(o);
+			});
+			this.Features.reverse();
+			
+			this.recommend.forEach(o=>{
+				this.Features.push(o);
+			});
+			
 			});
 		}
 	}
 </script>
 
 <style scoped>
+	#home {
+		padding-top: 44px;
+	}
+	
 	.home-nav {
 		/* assets/css/base.css */
 		background-color: var(--color-tint); 
 		color: #fff;
+		
+		position:fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 9;
 	}
+	
 </style>
