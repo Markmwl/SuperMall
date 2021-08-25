@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from '../App.vue'
+import App from '@/App.vue'
 
 Vue.use(Router);
 
@@ -12,7 +12,7 @@ const routes = [
 	{
 		path: '/Home',
 		name: 'Home',
-		component: () => import('../views/Home/Home.vue'),
+		component: () => import('@/views/Home/Home.vue'),
 		meta: {
 			title: '首页'
 		}
@@ -20,7 +20,7 @@ const routes = [
 	{
 		path: '/Class',
 		name: 'Class',
-		component: () => import('../views/Class/Class.vue'),
+		component: () => import('@/views/Class/Class.vue'),
 		meta: {
 			title: '分类'
 		}
@@ -28,7 +28,7 @@ const routes = [
 	{
 		path: '/Shoping',
 		name: 'Shoping',
-		component: () => import('../views/Shoping/Shoping.vue'),
+		component: () => import('@/views/Shoping/Shoping.vue'),
 		meta: {
 			title: '购物车'
 		}
@@ -36,7 +36,7 @@ const routes = [
 	{
 		path: '/Mi',
 		name: 'Mi',
-		component: () => import('../views/Mi/Mi.vue'),
+		component: () => import('@/views/Mi/Mi.vue'),
 		meta: {
 			title: '我的'
 		}
