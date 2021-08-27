@@ -9,23 +9,87 @@
 		<MarkCircularText :recommends="recommend"></MarkCircularText>
 		<!-- 本周流行 -->
 		<FeatureView :Features="Features"></FeatureView>
+		<!-- tabcontrol -->
+		<TabControl :titles ="['流行','新款','精选']" class="Tab-Control"></TabControl>
 		<a>首页界面</a>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<h4>1</h4>
+		<!-- 此处加换行是因为底部内容被遮挡 -->
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 	</div>
 </template>
 
 <script>
+	//公共组件
 	import NavBar from 'components/common/navbar/NavBar';
-	import {GetHomeMultidata} from 'network/HomeWork.js';
+	//公共业务组件
+	import TabControl from 'components/content/TabControl/TabControl';
+    //home相关子组件
 	import HomeSwiper from './childcops/HomeSwiper.vue';
 	import MarkCircularText from './childcops/MarkCircularText.vue';
 	import FeatureView from './childcops/FeatureView.vue';
+	//网络请求组件
+	import {GetHomeMultidata} from 'network/HomeWork.js';
+	
 	export default {
 		name:"home",
 		components:{
 			NavBar,
 			HomeSwiper,
 			MarkCircularText,
-			FeatureView
+			FeatureView,
+			TabControl
 		},
 		data(){
 			return {
@@ -75,6 +139,12 @@
 		right: 0;
 		top: 0;
 		z-index: 9;
+	}
+	
+	.Tab-Control {
+		/* 设置吸顶效果可以使用position: sticky和top设置吸顶高度连用 */
+		position: sticky;
+		top: 44px;
 	}
 	
 </style>
